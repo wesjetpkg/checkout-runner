@@ -1,6 +1,6 @@
-### Checkout Runner - WesjetPkg
+### Checkout Runner - Github Action | Wesbitty, Inc.
 
 ```yml
     steps:
-      - uses: wesjetpkg/checkout-runner@main
+      - uses: wesjetpkg/checkout-runner@v1
 ```
