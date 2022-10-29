@@ -1,1 +1,23 @@
 name: 'Checkout Runner'
+description: 'This action checks out the commit, sets up Node and installs dependencies using yarn in application pages, e.g Monorepo, Gitsubmodules Repo.'
+author: 'wesjetpkg'
+branding:
+  icon: 'check'
+  color: 'blue'
+runs:
+  using: 'composite'
+  steps:
+    - name: Support longpaths (needed for Windows)
+      run: git config --global core.longpaths true
+      shell: bash
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: yarn
+    - name: Install dependencies via yarn
+      run: yarn install
+      shell: bash
+
