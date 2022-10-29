@@ -1,5 +1,5 @@
 name: 'Checkout Runner'
-description: 'This action checks out the commit, sets up Node and installs dependencies using yarn in application pages, e.g Monorepo, Gitsubmodules Repo.'
+description: 'This action checks out the commit, sets up Node and installs dependencies using yarn in github repositories'
 author: 'wesjetpkg'
 branding:
   icon: 'check'
